@@ -1,0 +1,11 @@
+:root {
+  --font: Source Sans Pro, sans-serif;
+  --gris-oscuro: #262626;
+}
+
+
+body {
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

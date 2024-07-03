@@ -1,0 +1,29 @@
+{
+  "videos": [
+    {
+      "id": 1,
+      "name": "Video 2",
+      "category": 1
+    },
+    {
+      "id": 2,
+      "name": "Video 2",
+      "category": 1
+    },
+    {
+      "id": 5,
+      "name": "Video 4",
+      "category": 1
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Category A"
+    },
+    {
+      "id": 2,
+      "name": "Category B"
+    }
+  ]
+}
