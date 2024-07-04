@@ -1,29 +1,40 @@
 {
   "videos": [
     {
-      "id": 1,
-      "name": "Video 2",
-      "category": 1
+      "id": "fd87",
+      "name": "a",
+      "category": "1",
+      "imageurl": "b",
+      "videourl": "c",
+      "description": "d"
     },
     {
-      "id": 2,
-      "name": "Video 2",
-      "category": 1
+      "id": "9398",
+      "name": "e",
+      "category": "2",
+      "imageurl": "f",
+      "videourl": "g",
+      "description": "h"
     },
     {
-      "id": 5,
-      "name": "Video 4",
-      "category": 1
+      "id": "04c9",
+      "name": "p",
+      "category": "2",
+      "imageurl": "o",
+      "videourl": "i",
+      "description": "u"
     }
   ],
   "categories": [
     {
-      "id": 1,
-      "name": "Category A"
+      "id": "1",
+      "name": "Front End",
+      "color": "#6BD1FF"
     },
     {
-      "id": 2,
-      "name": "Category B"
+      "id": "2",
+      "name": "Back End",
+      "color": "#00C86F"
     }
   ]
 }

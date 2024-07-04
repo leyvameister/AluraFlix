@@ -4,6 +4,9 @@ import { AppProvider } from './context/AppContext';
 import Home from './page/Home';
 import NewVideo from './page/NewVideo';
 import Layout from './page/Layout';
+import Modal from 'react-modal';
+
+Modal.setAppElement('#root');
 
 function App() {
   return (

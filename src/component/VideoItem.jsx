@@ -23,7 +23,6 @@ const VideoItem = ({ video }) => {
   return (
     <div>
       <h3>{video.name}</h3>
-      <p>{categoryName}</p>
       <button onClick={() => setModalIsOpen(true)}>Edit</button>
       <button onClick={() => deleteVideo(video.id)}>Delete</button>
       <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
@@ -32,8 +31,31 @@ const VideoItem = ({ video }) => {
             name="name"
             value={formData.name}
             onChange={handleInputChange}
+            placeholder="Name"
           />
-          <select name="category" value={formData.category} onChange={handleInputChange}>
+          <input
+            name="imageurl"
+            value={formData.imageurl}
+            onChange={handleInputChange}
+            placeholder="Image URL"
+          />
+          <input
+            name="videourl"
+            value={formData.videourl}
+            onChange={handleInputChange}
+            placeholder="Video URL"
+          />
+          <input
+            name="description"
+            value={formData.description}
+            onChange={handleInputChange}
+            placeholder="Description"
+          />
+          <select
+            name="category"
+            value={formData.category}
+            onChange={handleInputChange}
+          >
             {categories.map((cat) => (
               <option key={cat.id} value={cat.id}>
                 {cat.name}

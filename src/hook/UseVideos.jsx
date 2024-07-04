@@ -21,12 +21,44 @@ const useVideos = () => {
     fetchCategories();
   }, [dispatch]);
 
+  const addVideo = async (video) => {
+    const response = await fetch('http://localhost:3000/videos', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(video),
+    });
+    const data = await response.json();
+    dispatch({ type: 'ADD_VIDEO', payload: data });
+  };
+
+  const editVideo = async (video) => {
+    const response = await fetch(`http://localhost:3000/videos/${video.id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(video),
+    });
+    const data = await response.json();
+    dispatch({ type: 'EDIT_VIDEO', payload: data });
+  };
+
+  const deleteVideo = async (id) => {
+    await fetch(`http://localhost:3000/videos/${id}`, {
+      method: 'DELETE',
+    });
+    dispatch({ type: 'DELETE_VIDEO', payload: id });
+  };
+
+
   return {
     videos: state.videos,
     categories: state.categories,
-    addVideo: (video) => dispatch({ type: 'ADD_VIDEO', payload: video }), //method: POST
-    editVideo: (video) => dispatch({ type: 'EDIT_VIDEO', payload: video }), //method: PUT
-    deleteVideo: (id) => dispatch({ type: 'DELETE_VIDEO', payload: id }), //method: DELETE
+    addVideo,
+    editVideo,
+    deleteVideo
   };
 };
 
