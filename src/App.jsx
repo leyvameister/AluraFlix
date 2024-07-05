@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { AppProvider } from './context/AppContext';
-import Home from './page/Home';
-import NewVideo from './page/NewVideo';
-import Layout from './page/Layout';
 import Modal from 'react-modal';
+import Layout from './page/Layout/Layout';
+import Home from './page/Home/Home';
+import NewVideo from './page/NewVideo/NewVideo';
 
 Modal.setAppElement('#root');
 

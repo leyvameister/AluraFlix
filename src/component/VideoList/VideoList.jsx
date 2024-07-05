@@ -1,5 +1,5 @@
 import React from 'react';
-import VideoItem from './VideoItem';
+import VideoItem from '../VideoItem/VideoItem';
 
 const VideoList = ({ categories, videos }) => {
   const groupedVideos = categories.map((category) => {
@@ -11,7 +11,7 @@ const VideoList = ({ categories, videos }) => {
   }).filter(group => group.videos.length > 0);
 
   return (
-    <div>
+    <>
       {groupedVideos.map(group => (
         <div key={group.category.id}>
           <h2>{group.category.name}</h2>
@@ -20,7 +20,7 @@ const VideoList = ({ categories, videos }) => {
           ))}
         </div>
       ))}
-    </div>
+    </>
   );
 };
 
