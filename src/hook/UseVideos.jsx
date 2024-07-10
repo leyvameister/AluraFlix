@@ -6,13 +6,13 @@ const useVideos = () => {
 
   useEffect(() => {
     const fetchVideos = async () => {
-      const response = await fetch('https://one-aluraflix-json-server.vercel.app/videos');
+      const response = await fetch('https://668ee3fdbf9912d4c9300d88.mockapi.io/videos');
       const data = await response.json();
       dispatch({ type: 'SET_VIDEOS', payload: data });
     };
 
     const fetchCategories = async () => {
-      const response = await fetch('https://one-aluraflix-json-server.vercel.app/categories');
+      const response = await fetch('https://668ee3fdbf9912d4c9300d88.mockapi.io/categories');
       const data = await response.json();
       dispatch({ type: 'SET_CATEGORIES', payload: data });
     };
@@ -22,7 +22,7 @@ const useVideos = () => {
   }, [dispatch]);
 
   const addVideo = async (video) => {
-    const response = await fetch('https://one-aluraflix-json-server.vercel.app/videos', {
+    const response = await fetch('https://668ee3fdbf9912d4c9300d88.mockapi.io/videos', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -34,7 +34,7 @@ const useVideos = () => {
   };
 
   const editVideo = async (video) => {
-    const response = await fetch(`https://one-aluraflix-json-server.vercel.app/videos/${video.id}`, {
+    const response = await fetch(`https://668ee3fdbf9912d4c9300d88.mockapi.io/videos/${video.id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ const useVideos = () => {
   };
 
   const deleteVideo = async (id) => {
-    await fetch(`https://one-aluraflix-json-server.vercel.app/videos/${id}`, {
+    await fetch(`https://668ee3fdbf9912d4c9300d88.mockapi.io/videos/${id}`, {
       method: 'DELETE',
     });
     dispatch({ type: 'DELETE_VIDEO', payload: id });
