@@ -1,0 +1,59 @@
+.videoContainer {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 10px;
+}
+
+.categoryTitle {
+    width: fit-content;
+    margin: 20px;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
+.videoContainer::-webkit-scrollbar {
+    margin: 10px;
+    height: 12px;
+}
+
+.videoContainer::-webkit-scrollbar-track {
+    background: #1b2838;
+    border-radius: 10px;
+}
+
+.videoContainer::-webkit-scrollbar-thumb {
+    background: #2271D1;
+    border-radius: 10px;
+    border: none;
+}
+
+.videoContainer::-webkit-scrollbar-button {
+    display: none;
+}
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+
+    .videoContainer {
+        text-align: center;
+    }
+
+    .categoryTitle {
+        margin: 20px auto;
+        padding: 10px 70px;
+    }
+
+
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+
+    .videoContainer {
+        text-align: left;
+    }
+
+    .categoryTitle {
+       margin: 20px; 
+    }
+  }

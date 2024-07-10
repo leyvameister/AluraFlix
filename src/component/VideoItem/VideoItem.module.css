@@ -1,0 +1,107 @@
+.video {
+    display: inline-block;
+    border-radius: 8px;
+    margin: 0px 20px;
+}
+
+.image {
+    width: 203px;
+    height: 126px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.title {
+    color: white;
+    padding: 10px;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.button img {
+    width: 15px;
+    height: 18px;
+}
+
+.modal {
+    position: absolute;
+    inset: 40px;
+    border: 3px solid #6BD1FF;
+    background: #03122F;
+    overflow: auto;
+    border-radius: 8px;
+    outline: none;
+    padding: 20px;
+}
+
+.modalTitle {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2271D1;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.cancelButtonContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.cancelButton {
+    padding: 10px 25px;
+    background-color: #03122F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+.cancelButton:hover {
+    background-color: #0057b32c;
+}
+
+.modal::-webkit-scrollbar {
+    margin: 10px;
+    height: 12px;
+}
+
+.modal::-webkit-scrollbar-track {
+    background: #1b2838;
+    border-radius: 10px;
+}
+
+.modal::-webkit-scrollbar-thumb {
+    background: #2271D1;
+    border-radius: 10px;
+    border: none;
+}
+
+.modal::-webkit-scrollbar-button {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+  
+    .modal {
+        inset: 40px 200px;
+    }
+
+  }

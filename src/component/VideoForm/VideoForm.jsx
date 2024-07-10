@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import useValidation from '../../hook/UseValidation';
 
-const VideoForm = ({ initialData, onSubmit, categories, submitText, resetForm }) => {
+const VideoForm = ({ initialData, onSubmit, categories, submitText, resetForm, styles }) => {
   const [formData, setFormData] = useState(initialData);
   const { errors, validate } = useValidation(formData);
 
@@ -26,53 +26,58 @@ const VideoForm = ({ initialData, onSubmit, categories, submitText, resetForm })
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>Name</label>
+    <form onSubmit={handleSubmit} className={styles.form}>
+      <div className={styles.formGroup}>
+        <label className={styles.formLabel}>Name</label>
         <input
           name="name"
           value={formData.name}
           onChange={handleChange}
           placeholder="Video Name"
+          className={styles.formInput}
         />
-        {errors.name && <p>{errors.name}</p>}
+        {errors.name && <p className={styles.formError}>{errors.name}</p>}
       </div>
-      <div>
-        <label>Image URL</label>
+      <div className={styles.formGroup}>
+        <label className={styles.formLabel}>Image URL</label>
         <input
           name="imageurl"
           value={formData.imageurl}
           onChange={handleChange}
           placeholder="Image URL"
+          className={styles.formInput}
         />
-        {errors.imageurl && <p>{errors.imageurl}</p>}
+        {errors.imageurl && <p className={styles.formError}>{errors.imageurl}</p>}
       </div>
-      <div>
-        <label>Video URL</label>
+      <div className={styles.formGroup}>
+        <label className={styles.formLabel}>Video URL</label>
         <input
           name="videourl"
           value={formData.videourl}
           onChange={handleChange}
           placeholder="Video URL"
+          className={styles.formInput}
         />
-        {errors.videourl && <p>{errors.videourl}</p>}
+        {errors.videourl && <p className={styles.formError}>{errors.videourl}</p>}
       </div>
-      <div>
-        <label>Description</label>
+      <div className={styles.formGroup}>
+        <label className={styles.formLabel}>Description</label>
         <input
           name="description"
           value={formData.description}
           onChange={handleChange}
           placeholder="Description"
+          className={styles.formInput}
         />
-        {errors.description && <p>{errors.description}</p>}
+        {errors.description && <p className={styles.formError}>{errors.description}</p>}
       </div>
-      <div>
-        <label>Category</label>
+      <div className={styles.formGroup}>
+        <label className={styles.formLabel}>Category</label>
         <select
           name="category"
           value={formData.category}
           onChange={handleChange}
+          className={styles.formSelect}
         >
           <option value="">Select Category</option>
           {categories.map((cat) => (
@@ -81,9 +86,11 @@ const VideoForm = ({ initialData, onSubmit, categories, submitText, resetForm })
             </option>
           ))}
         </select>
-        {errors.category && <p>{errors.category}</p>}
+        {errors.category && <p className={styles.formError}>{errors.category}</p>}
       </div>
-      <button type="submit">{submitText}</button>
+      <div className={styles.formButtonContainer}>
+        <button type="submit" className={styles.formButton}>{submitText}</button>
+      </div>
     </form>
   );
 };

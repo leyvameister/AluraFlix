@@ -1,5 +1,6 @@
 import React from 'react';
 import VideoItem from '../VideoItem/VideoItem';
+import styles from './VideoList.module.css';
 
 const VideoList = ({ categories, videos }) => {
   const groupedVideos = categories.map((category) => {
@@ -13,12 +14,16 @@ const VideoList = ({ categories, videos }) => {
   return (
     <>
       {groupedVideos.map(group => (
-        <div key={group.category.id}>
-          <h2>{group.category.name}</h2>
-          {group.videos.map(video => (
-            <VideoItem key={video.id} video={video} />
-          ))}
-        </div>
+        <section className={styles.videoSection} key={group.category.id}>
+          <h2 className={styles.categoryTitle} style={{ backgroundColor: group.category.color }}>
+            {group.category.name}
+          </h2>
+          <div className={styles.videoContainer}>
+            {group.videos.map(video => (
+              <VideoItem key={video.id} video={video} color={group.category.color} />
+            ))}
+          </div>
+        </section>
       ))}
     </>
   );

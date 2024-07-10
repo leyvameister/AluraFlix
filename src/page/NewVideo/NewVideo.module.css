@@ -1,0 +1,14 @@
+.title {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 20px;
+  border-bottom: 1px solid gainsboro;
+}
+
+.successMessage {
+  color: rgba(71, 226, 71, 0.965);
+  font-size: 1rem;
+  margin-top: 5px;
+  text-align: center;
+}

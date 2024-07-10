@@ -1,0 +1,42 @@
+.header {
+    display: none;
+}
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+
+    .header {
+        display: flex;
+        background: black;
+        border-bottom: 2px solid #2271D1;
+        padding: 15px;
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .ul {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 5px 10px;
+        border: 2px solid white;
+        border-radius: 7px;
+    }
+
+    .active {
+        color: #2271D1;
+        font-weight: bold;
+        display: flex;
+        gap: 10px;
+        border: 2px solid #2271D1;
+    }
+}

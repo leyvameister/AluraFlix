@@ -1,10 +1,11 @@
 :root {
   --font: Source Sans Pro, sans-serif;
-  --gris-oscuro: #262626;
+  --dark-gray: #191919;
 }
 
 
 body {
+  background-color: var(--dark-gray);
   font-family: var(--font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
