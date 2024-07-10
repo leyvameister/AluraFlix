@@ -9,7 +9,7 @@ const useValidation = (formData) => {
 
     if (!formData.name) {
       validationErrors.name = 'Name is required';
-    } else if (formData.name.length > 10) {
+    } else if (formData.name.length > 20) {
       validationErrors.name = 'Name must not exceed 10 characters';
     }
 
